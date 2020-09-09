@@ -19,7 +19,7 @@ function draw()
   background(255,255,255);  
 
   if(bullet.isTouching(wall)){
-      damage=0.5*weight*speed*speed/thickness*thickness*thickness;
+      damage=0.5*weight*speed*speed/(thickness*thickness*thickness)
       bullet.velocityX=0;
   
 
@@ -29,7 +29,7 @@ function draw()
   }
 
   if(damage<10){
-    bullet.shapeColor=color(255,0,0);
+    wall.shapeColor=color(255,0,0);
     console.log(damage);
   }
 }
